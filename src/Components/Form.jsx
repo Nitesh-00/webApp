@@ -9,16 +9,7 @@ class Form extends Component {
         }
     }
 
-    trap_t = (event) => {
-        this.setState({t : event.target.value})
-        const val = this.state.p
-       if(val.includes("@")){
-            alert("@ is not allowed")
-       }
-       else {
-        this.setState("Value=''");
-       }
-    }
+    
     trap_p = (event) => {
         this.setState({p : event.target.value})
        
@@ -28,7 +19,7 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <input type="text" placeholder='name' value={this.state.t} onChange={this.trap_t} />
+        <input type="text" placeholder='name' value={this.state.t}  />
         <br /><br />
         <input type="text" placeholder='password' value={this.state.p} onChange={this.trap_p} />
       </div>
